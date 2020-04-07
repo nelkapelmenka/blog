@@ -1,0 +1,294 @@
+html, body {
+  font-family: 'Helvetica';
+}
+
+.background{
+  background-color: #FDE2AD;
+}
+
+a{
+  color: white;
+  font-size: 20px;
+  background-color: #9C7A34;
+  padding-top: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+  border: solid 2px white;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+h1 {
+  color: #9C7A34;
+}
+
+h3 {
+  padding-top: 5px;
+}
+q {
+  display:flex;
+  color: white;
+  font-style: italic;
+  font-family: courier new;
+  font-size: 15px;
+  align-content: center;
+  justify-content: center;
+}
+
+p{
+  display: flex;
+  font-size: 13px;
+  color: white;
+  font-family: courier new;
+  align-content: center;
+  justify-content: center;
+}
+
+.container-authors {
+  display:grid;
+  grid-template-rows: 50px 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "hd"
+    "ath"
+}
+
+.container-items {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: 50px 170px 1fr;
+  grid-template-areas:
+    "hd hd"
+    "bg bg"
+    "qt main"
+}
+
+.header {
+  grid-area: hd;
+  display: flex;
+  justify-content: left;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.quote {
+  grid-area: qt;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: stretch;
+  background-color: #9C7A34;
+  border: solid 2px white;
+}
+
+.author {
+  background-color: #EFE7D6;
+  grid-area: ath;
+  display: grid;
+  border: solid 2px white;
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: 60px 90px 1fr;
+}
+
+.author-nelli-photo {
+  grid-area: 1/1/3/1;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ5Wc6Y6opK4abkE9W0tQfrGDxj0gPmeeE28083DylRGT8xK2HO&usqp=CAU");
+  border-right: solid 2px white;
+  border-bottom: solid 2px white;
+}
+
+.author-name {
+  display:flex;
+  grid-area: 1/2/1/2;
+  border-bottom: solid 2px white;
+  align-items: center;
+  justify-content: center;
+}
+
+.author-fav-quote {
+  background-color: #9C7A34;
+  display: flex;
+  flex-direction: column;
+  grid-area: 2/2/2/2;
+  border-bottom: solid 2px white;
+  align-items: center;
+  justify-content:  center;
+}
+
+.author-description {
+  grid-area: 3/1/3/3;
+
+}
+
+.main-blog {
+  background-color: #EFE7D6;
+  grid-area: main;
+  border: solid 2px white;
+  margin-left: 7px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-books-photo {
+  grid-area: bg;
+  border: solid 2px white;
+  margin-bottom: 7px;
+  background-image: url("https://www.disabilitylawyerny.com/wp-content/uploads/2019/10/library-books-dmitrij-paskevic-YjVa-F9P9kk-unsplash-2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.background-movies-photo {
+  grid-area: bg;
+  border: solid 2px white;
+  margin-bottom: 7px;
+  background-image: url("https://www.wrvo.org/sites/wrvo/files/styles/x_large/public/201403/popcorn_horizontal.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.background-food-photo {
+  grid-area: bg;
+  border: solid 2px white;
+  margin-bottom: 7px;
+  background-image: url("https://www.familypathways.org/wp-content/uploads/2019/06/Long-Table-photo-WEB.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.background-music-photo {
+  grid-area: bg;
+  border: solid 2px white;
+  margin-bottom: 7px;
+  background-image: url("https://cdn.xl.thumbs.canstockphoto.com/old-music-sheet-page-art-background-stock-image_csp17509863.jpg");
+  background-position: center;
+}
+@media only screen and (max-device-width: 1024px) {
+  /*Tablet Screen*/
+  q{
+    font-size: 20px;
+  }
+
+  .container-items {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    grid-template-rows: 50px 150px 1fr;
+    grid-template-areas:
+      "hd hd"
+      "bg bg"
+      "qt main"
+  }
+}
+
+@media only screen and (max-device-width: 375px) {
+  /*Mobile Screen*/
+  a{
+    color: white;
+    font-size: 25px;
+    background-color: #9C7A34;
+    padding-top: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    border: solid 2px white;
+    text-decoration: none;
+    margin-right: 0px;
+  }
+
+  h1{
+      font-size:40px;
+  }
+
+  q{
+    font-size: 30px;
+  }
+
+  p{
+    font-size: 20px;
+  }
+
+  .container-items{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 60px 160px 1fr 1fr;
+    grid-template-areas:
+      "hd hd"
+      "bg bg"
+      "qt qt"
+      "main main"
+  }
+
+  .container-authors {
+    display:grid;
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "hd"
+      "ath"
+  }
+
+  .header {
+    grid-area: hd;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    padding-top: 5px;
+  }
+
+  .quote {
+    grid-area: qt;
+    display: flex;
+    justify-content: center;
+    background-color: #9C7A34;
+    border: solid 2px white;
+    padding: 5px;
+  }
+
+  .main-blog {
+    grid-area: main;
+    border: solid 2px white;
+    margin-left: 0px;
+    margin-top: 7px;
+  }
+
+  .author {
+    background-color: #EFE7D6;
+    grid-area: ath;
+    display: grid;
+    border: solid 2px white;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 150px 130px 1fr;
+  }
+
+  .author-nelli-photo {
+    grid-area: 1/1/1/1;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ5Wc6Y6opK4abkE9W0tQfrGDxj0gPmeeE28083DylRGT8xK2HO&usqp=CAU");
+    border-right: solid 2px white;
+    border-bottom: solid 2px white;
+  }
+
+  .author-name {
+    display:flex;
+    grid-area: 1/2/1/2;
+    border-bottom: solid 2px white;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .author-fav-quote {
+    background-color: #9C7A34;
+    display: flex;
+    flex-direction: column;
+    grid-area: 2/1/2/3;
+    border-bottom: solid 2px white;
+    align-items: center;
+    justify-content:  center;
+  }
+
+  .author-description {
+    grid-area: 3/1/3/3;
+
+  }
+}
